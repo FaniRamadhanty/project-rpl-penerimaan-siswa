@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Creative - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+        <style>
+.timeline {
+      position: relative;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 40px;
+      width: 2px;
+      margin-left: -1.5px;
+      content: "";
+      background-color: #e9ecef;
+    }
+    .timeline > li {
+      position: relative;
+      min-height: 50px;
+      margin-bottom: 50px;
+    }
+    .timeline > li:after, .timeline > li:before {
+      display: table;
+      content: " ";
+    }
+    .timeline > li:after {
+      clear: both;
+    }
+    .timeline > li .timeline-panel {
+      position: relative;
+      float: right;
+      width: 100%;
+      padding: 0 20px 0 100px;
+      text-align: left;
+    }
+    .timeline > li .timeline-panel:before {
+      right: auto;
+      left: -15px;
+      border-right-width: 15px;
+      border-left-width: 0;
+    }
+    .timeline > li .timeline-panel:after {
+      right: auto;
+      left: -14px;
+      border-right-width: 14px;
+      border-left-width: 0;
+    }
+    .timeline > li .timeline-image {
+      position: absolute;
+      z-index: 100;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      margin-left: 0;
+      text-align: center;
+      color: white;
+      border: 7px solid #e9ecef;
+      border-radius: 100%;
+      background-color: #ffc800;
+    }
+    .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+      font-size: 10px;
+      line-height: 14px;
+      margin-top: 12px;
+    }
+    .timeline > li.timeline-inverted > .timeline-panel {
+      float: right;
+      padding: 0 20px 0 100px;
+      text-align: left;
+    }
+    .timeline > li.timeline-inverted > .timeline-panel:before {
+      right: auto;
+      left: -15px;
+      border-right-width: 15px;
+      border-left-width: 0;
+    }
+    .timeline > li.timeline-inverted > .timeline-panel:after {
+      right: auto;
+      left: -14px;
+      border-right-width: 14px;
+      border-left-width: 0;
+    }
+    .timeline > li:last-child {
+      margin-bottom: 0;
+    }
+    .timeline .timeline-heading h4, .timeline .timeline-heading .h4 {
+      margin-top: 0;
+      color: inherit;
+    }
+    .timeline .timeline-heading h4.subheading, .timeline .timeline-heading .subheading.h4 {
+      text-transform: none;
+    }
+    .timeline .timeline-body > ul,
+    .timeline .timeline-body > p {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+      .timeline:before {
+        left: 50%;
+      }
+      .timeline > li {
+        min-height: 100px;
+        margin-bottom: 100px;
+      }
+      .timeline > li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+      }
+      .timeline > li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+      }
+      .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 16px;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+      }
+    }
+    @media (min-width: 992px) {
+      .timeline > li {
+        min-height: 150px;
+      }
+      .timeline > li .timeline-panel {
+        padding: 0 20px 20px;
+      }
+      .timeline > li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+      }
+      .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 30px;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 20px 20px;
+      }
+    }
+    @media (min-width: 1200px) {
+      .timeline > li {
+        min-height: 170px;
+      }
+      .timeline > li .timeline-panel {
+        padding: 0 20px 20px 100px;
+      }
+      .timeline > li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+      }
+      .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+        margin-top: 40px;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 100px 20px 20px;
+      }
+    }
+    .team-member {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .team-member img {
+      width: 14rem;
+      height: 14rem;
+      border: 0.5rem solid rgba(0, 0, 0, 0.1);
+    }
+    .team-member h4, .team-member .h4 {
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 40px;
+      width: 2px;
+      margin-left: -1.5px;
+      content: "";
+      background-color: #e9ecef;
+    }
+    .timeline > li {
+      position: relative;
+      min-height: 50px;
+      margin-bottom: 50px;
+    }
+    .timeline > li:after, .timeline > li:before {
+      display: table;
+      content: " ";
+    }
+    .timeline > li:after {
+      clear: both;
+    }
+    .timeline > li .timeline-panel {
+      position: relative;
+      float: right;
+      width: 100%;
+      padding: 0 20px 0 100px;
+      text-align: left;
+    }
+    .timeline > li .timeline-panel:before {
+      right: auto;
+      left: -15px;
+      border-right-width: 15px;
+      border-left-width: 0;
+    }
+    .timeline > li .timeline-panel:after {
+      right: auto;
+      left: -14px;
+      border-right-width: 14px;
+      border-left-width: 0;
+    }
+    .timeline > li .timeline-image {
+      position: absolute;
+      z-index: 100;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      margin-left: 0;
+      text-align: center;
+      color: white;
+      border: 7px solid #e9ecef;
+      border-radius: 100%;
+      background-color: #ffc800;
+    }
+    .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+      font-size: 10px;
+      line-height: 14px;
+      margin-top: 12px;
+    }
+    .timeline > li.timeline-inverted > .timeline-panel {
+      float: right;
+      padding: 0 20px 0 100px;
+      text-align: left;
+    }
+    .timeline > li.timeline-inverted > .timeline-panel:before {
+      right: auto;
+      left: -15px;
+      border-right-width: 15px;
+      border-left-width: 0;
+    }
+    .timeline > li.timeline-inverted > .timeline-panel:after {
+      right: auto;
+      left: -14px;
+      border-right-width: 14px;
+      border-left-width: 0;
+    }
+    .timeline > li:last-child {
+      margin-bottom: 0;
+    }
+    .timeline .timeline-heading h4, .timeline .timeline-heading .h4 {
+      margin-top: 0;
+      color: inherit;
+    }
+    .timeline .timeline-heading h4.subheading, .timeline .timeline-heading .subheading.h4 {
+      text-transform: none;
+    }
+    .timeline .timeline-body > ul,
+    .timeline .timeline-body > p {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+      .timeline:before {
+        left: 50%;
+      }
+      .timeline > li {
+        min-height: 100px;
+        margin-bottom: 100px;
+      }
+      .timeline > li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+      }
+      .timeline > li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+      }
+      .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 16px;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+      }
+    }
+    @media (min-width: 992px) {
+      .timeline > li {
+        min-height: 150px;
+      }
+      .timeline > li .timeline-panel {
+        padding: 0 20px 20px;
+      }
+      .timeline > li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+      }
+      .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 30px;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 20px 20px;
+      }
+    }
+    @media (min-width: 1200px) {
+      .timeline > li {
+        min-height: 170px;
+      }
+      .timeline > li .timeline-panel {
+        padding: 0 20px 20px 100px;
+      }
+      .timeline > li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+      }
+      .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+        margin-top: 40px;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 100px 20px 20px;
+      }
+    }
+    .team-member {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .team-member img {
+      width: 14rem;
+      height: 14rem;
+      border: 0.5rem solid rgba(0, 0, 0, 0.1);
+    }
+    .team-member h4, .team-member .h4 {
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+    }
+
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">SMK ASSALAAM BANDUNG</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Since</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Selamat datang di situs Resmi SMK Assalaam Bandung</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Industries Education Based || Sekolah Teaching Factory || Terakreditasi A</p>
+                        <a class="btn btn-primary btn-xl" href="https://www.youtube.com/watch?v=6dGD9WFqs6Y&t=476s">PROFIL</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">TENTANG SMK ASSALAAM BANDUNG</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">SMK Assalaam merupakan sekolah kejuruan dengan kompetensi keahlian teknik kendaraan ringan (roda empat) plus sepeda motor dalam proses pendidikan pelatihan. Peka terhadap perubahan perkembangan teknologi baru dan tuntutan kebutuhan pasar kerja, agar lulusannya siap menghadapi perubahan.
+                        <br></br>
+                            SMK Assalaam dengan penuh kesadaran berani melakukan perubahan dengan berbagai inovasi dan improvisasi, mencari terobosan untuk meraih keberhasilan bagi peserta didiknya.
+                        <br></br>
+                            Tekad tersebut sebagai wujud nyata dari SMK Assalaam didukung oleh sarana praktek yang lengkap UP TO DATE, waktu praktek memadai dan praktek berstandar industri dengan pelayanan prima.<p>
+                        <a class="btn btn-light btn-xl" href="#portofolio">PORTOFOLIO</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Since-->
+        <section class="page-section bg-light" id="gallery">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">JURUSAN</h2>
+                    <div></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/tkro.jpg" alt="..." />
+                            <h4>TKRO</h4>
+                            <p class="text-muted">Teknik Kendaraan Ringan Otomotif <br>Bediri Sejak Tahun 2009</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="team-member">
+                          <img class="mx-auto rounded-circle" src="assets/img/rpl.jpg" alt="..." />
+                          <h4>RPL</h4>
+                          <p class="text-muted">Rekayasa Perangkat Lunak <br>Bediri Sejak Tahun 2013</p>
+                      </div>
+                  </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/tbsm.jpg" alt="..." />
+                            <h4>TBSM</h4>
+                            <p class="text-muted">Teknik Bisnis Sepeda Motor <br>Bediri Sejak Tahun 2014</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"></p></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Portfolio-->
+        <div id="portfolio">
+            <div class="container-fluid p-0" id="portofolio">
+                <div class="row g-0">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/lapangan.jpg" title="Lapangan">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/lapangan.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Fasilitas</div>
+                                <div class="project-name">Lapangan</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/kelas.jpg" title="Ruang Kelas">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/kelas.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Fasilitas</div>
+                                <div class="project-name">Ruang Kelas</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/perpus.jpg" title="Perpustakaan">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/perpus.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Fasilitas</div>
+                                <div class="project-name">Perpustakaan</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/labrpl.jpg" title="Lab RPL">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/labrpl.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Fasilitas</div>
+                                <div class="project-name">Lab RPL</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/masjid.jpg" title="Masjid">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/masjid.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Fasilitas</div>
+                                <div class="project-name">Masjid</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/bengkeltbsm.jpg" title="Bengkel TKRO">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/bengkeltbsm.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Fasilitas</div>
+                                <div class="project-name">Bengkel TKRO</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to action-->
+        <section class="page-section bg-dark text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">BERGABUNG BERSAMA KAMI</h2>
+                <a class="btn btn-light btn-xl" href="form-daftar.php">DAFTAR</a>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">SEND MESSAGE</h2>
+                        <hr class="divider" />
+                        <p class="text-muted mb-5">Send message if you have any questions!</p>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                        <div>022 5420-220 - Central Office <br>
+                          022 5420-220 - Fax  <br></div><br> 
+                          Jl. Situtarate - terusan cibaduyut, Kab. Bandung - Jawa Barat
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Fani Ramadhanty</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
